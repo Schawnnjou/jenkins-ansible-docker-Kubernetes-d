@@ -1,7 +1,8 @@
 From centos:latest
 MAINTAINER ajoutane@ttuhsc.edu
 RUN yum install -y httpd zip unzip
-
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+EXPOSE 80
 
 # FROM  centos:latest
 # MAINTAINER vikashashoke@gmail.com
