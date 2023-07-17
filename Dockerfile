@@ -2,12 +2,9 @@ FROM httpd:latest
 MAINTAINER ajoutane@ttuhsc.edu
 
 RUN apt update
-RUN apt-get install apache2 zip unzip -y
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page265/shine.zip /var/www/html/
-WORKDIR /var/www/html/
-RUN unzip photogenic.zip
-RUN cp -rvf photogenic/* .
-RUN rm -rf photogenic photogenic.zip
+RUN apt-get install apache2 
+RUN apt-get install wget
+
 
 # FROM  centos:latest
 # MAINTAINER vikashashoke@gmail.com
