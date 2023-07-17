@@ -1,9 +1,10 @@
-FROM  centos:latest
+FROM ubuntu:22.04
 MAINTAINER ajoutane@ttuhsc.edu
-RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
-RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
-RUN yum update 
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+RUN apt update
+RUN apt install -y nginx php-fpm supervisor
+RUN rm -rf /var/lib/apt/lists/*
+RUN apt clean
+
 EXPOSE 80
 
 # FROM  centos:latest
