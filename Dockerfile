@@ -1,6 +1,7 @@
-FROM  centos:latest
-MAINTAINER ajoutane@ttuhsc.edu
-RUN yum update
+FROM centos:8
+LABEL maintainer=" ajoutane@ttuhsc.edu"
+RUN dnf update -y
+RUN dnf upgrade -y
 
 # FROM  centos:latest
 # MAINTAINER vikashashoke@gmail.com
