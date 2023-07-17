@@ -2,8 +2,8 @@ FROM httpd:latest
 MAINTAINER ajoutane@ttuhsc.edu
 
 RUN apt update
-RUN apt-get install apache2 
-RUN apt-get install wget
+RUN apt install apache2 -y
+RUN apt install wget -y
 
 
 # FROM  centos:latest
