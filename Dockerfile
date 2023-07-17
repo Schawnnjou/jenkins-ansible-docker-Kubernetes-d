@@ -4,7 +4,9 @@ MAINTAINER ajoutane@ttuhsc.edu
 RUN apt update
 RUN apt install apache2 -y
 RUN apt install wget -y
-
+RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page265/shine.zip
+RUN unzip shine.zip
+RUN ls -la
 
 # FROM  centos:latest
 # MAINTAINER vikashashoke@gmail.com
