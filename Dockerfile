@@ -1,6 +1,6 @@
 FROM centos:8
 LABEL maintainer=" ajoutane@ttuhsc.edu"
-RUN yum install -y httpd \
+sudo RUN yum install -y httpd \
  zip\
  unzip
 
