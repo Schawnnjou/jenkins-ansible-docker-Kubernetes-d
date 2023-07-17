@@ -1,10 +1,10 @@
 FROM ubuntu:22.04
 MAINTAINER ajoutane@ttuhsc.edu
 RUN apt update
-RUN apt install -y nginx php-fpm supervisor
+RUN apt install -y nginx 
 
 
-EXPOSE 80
+
 
 # FROM  centos:latest
 # MAINTAINER vikashashoke@gmail.com
