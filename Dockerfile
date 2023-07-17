@@ -1,8 +1,18 @@
-FROM centos:8
-LABEL maintainer=" ajoutane@ttuhsc.edu"
-sudo RUN yum install -y httpd \
- zip\
- unzip
+# Use the CentOS base image
+FROM centos:latest
+
+# Install necessary packages (in this case, nginx)
+RUN yum update -y && \
+    yum install -y epel-release && \
+    yum install -y nginx && \
+    yum clean all
+
+# Expose port 80 to allow incoming traffic
+EXPOSE 80
+
+# Start the nginx service when the container runs
+CMD ["nginx", "-g", "daemon off;"]
+
 
 # FROM  centos:latest
 # MAINTAINER vikashashoke@gmail.com
