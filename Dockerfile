@@ -1,6 +1,6 @@
 FROM  centos:latest
 MAINTAINER ajoutane@ttuhsc.edu
-
+RUN yum install -y httpd zip unzip
 
 # FROM  centos:latest
 # MAINTAINER vikashashoke@gmail.com
