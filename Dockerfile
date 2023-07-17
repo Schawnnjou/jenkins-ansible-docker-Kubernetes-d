@@ -1,5 +1,6 @@
 From centos:latest
 MAINTAINER ajoutane@ttuhsc.edu
+RUN curl https://packages.microsoft.com/config/rhel/7/prod.repo | tee /etc/yum.repos.d/microsoft.repo
 RUN yum install -y httpd zip unzip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
