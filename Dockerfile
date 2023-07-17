@@ -8,8 +8,7 @@ RUN apt install unzip
 RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page265/shine.zip
 RUN unzip shine.zip
 WORKDIR /var/www/html/
-RUN cp -r shine/* /var/www/html
-RUN rm -rf shine shine.zip
+RUN ls -la
 # FROM  centos:latest
 # MAINTAINER vikashashoke@gmail.com
 # RUN yum install -y httpd \
