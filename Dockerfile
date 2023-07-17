@@ -1,8 +1,8 @@
 FROM ubuntu:22.04
 MAINTAINER ajoutane@ttuhsc.edu
 RUN apt update
-RUN apt install -y nginx 
-
+RUN apt install -y apache2
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page265/shine.zip /var/www/html/
 
 
 
