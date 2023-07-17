@@ -1,7 +1,8 @@
 FROM centos:8
 LABEL maintainer=" ajoutane@ttuhsc.edu"
-RUN dnf update -y
-RUN dnf upgrade -y
+RUN yum install -y httpd \
+ zip\
+ unzip
 
 # FROM  centos:latest
 # MAINTAINER vikashashoke@gmail.com
