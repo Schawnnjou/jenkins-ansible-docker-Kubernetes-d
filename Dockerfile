@@ -2,7 +2,7 @@ FROM httpd:latest
 MAINTAINER ajoutane@ttuhsc.edu
 
 RUN apt update
-RUN apt install -y httpd zip unzip
+RUN apt-get install httpd zip unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page265/shine.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip photogenic.zip
