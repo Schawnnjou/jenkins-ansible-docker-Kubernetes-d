@@ -1,6 +1,6 @@
 FROM  centos:latest
 MAINTAINER ajoutane@ttuhsc.edu
-RUN yum install -y httpd
+RUN yum update 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
 
