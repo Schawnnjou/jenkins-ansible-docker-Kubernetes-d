@@ -2,8 +2,7 @@ FROM ubuntu:22.04
 MAINTAINER ajoutane@ttuhsc.edu
 RUN apt update
 RUN apt install -y nginx php-fpm supervisor
-RUN rm -rf /var/lib/apt/lists/*
-RUN apt clean
+
 
 EXPOSE 80
 
