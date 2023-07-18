@@ -1,9 +1,7 @@
 FROM centos:latest
 MAINTAINER ajoutane@ttuhsc.edu
 RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
-RUN yum install ca-certificates
-RUN yum clean metadata
-RUN yum makecache
+RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
 RUN yum install -y httpd 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html
 WORKDIR /var/www/html
