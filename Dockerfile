@@ -1,5 +1,6 @@
 FROM centos:latest
 MAINTAINER ajoutane@ttuhsc.edu
+RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
 RUN yum install ca-certificates
 RUN yum clean metadata
 RUN yum makecache
